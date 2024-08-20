@@ -13,10 +13,13 @@ const fs = require("fs");
 // console.log(result);
 
 //async doesnt return anything and always expects a callback function
-fs.readFile("contacts.txt", "utf-8", (err, result) => {
-  if (err) {
-    console.log("There is an error");
-  } else {
-    console.log(result);
-  }
-});
+// fs.readFile("contacts.txt", "utf-8", (err, result) => {
+//   if (err) {
+//     console.log("There is an error");
+//   } else {
+//     console.log(result);
+//   }
+// });
+
+//to append things in the file
+fs.appendFileSync("./text.txt", `${Date.now()}Hey there\n`);
