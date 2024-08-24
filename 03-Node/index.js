@@ -6,6 +6,7 @@ const fs = require("fs");
 
 //this function takes a callback function which can process the incoming request
 const myServer = http.createServer((req, res) => {
+  if (req.url === "/favicon.ico") return res.end();
   const log = `${Date.now()} : ${req.url} New request recieved\n `;
   fs.appendFile("log.txt", log, (err, data) => {
     switch (req.url) {
