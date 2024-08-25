@@ -1,7 +1,7 @@
 //server
 
 //to make a http server, we have a built in mpdule called http
-const http = require("http");
+// const http = require("http");
 const express = require("express");
 
 const app = express();
