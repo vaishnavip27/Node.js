@@ -1,5 +1,3 @@
-1724526928232 : /about New request recieved
- 1724526968079 : /about?myname New request recieved
- 1724588875495 : /about New request recieved
- 1724588877476 : / New request recieved
+1724594211990 : GET / New request recieved
+ 1724594349810 : GET / New request recieved
  
