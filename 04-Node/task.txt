@@ -8,6 +8,12 @@ GET /api/users - List all users JSON
 GET /api/users/1 - get the user with id 1
 GET /api/users/2 - get the user with id 2
 
+//Dynamic path parameters(":" before any path means its dynamic)
+GET /api/users/:id
+:id -> its a variable
+
+
+//We cant use post request because, the browsers bydefault uses get request
 POST /api/users - Create a new user
 PATCH /api/user/id - Edit the user with id 1 
 
