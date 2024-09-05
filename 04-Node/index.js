@@ -22,6 +22,8 @@ app.use((req, res, next) => {
 
 //rest api points
 app.get("/api/users", (req, res) => {
+  res.setHeader("X-MyName", "Vaishnavi Patil"); //custom header
+  //Always add X to custom headers
   return res.json(users);
 });
 
