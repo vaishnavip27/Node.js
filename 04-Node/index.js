@@ -16,27 +16,27 @@ mongoose
 const userSchema = new mongoose.Schema(
   {
     firstName: {
-      type: "String",
+      type: String,
       //required means if we dont have a first name then the entry wont be inserted in the database
       required: true,
     },
 
     lastName: {
-      type: "String",
+      type: String,
     },
 
     email: {
-      type: "String",
+      type: String,
       required: true,
       //Unique: true means the same email ID should not be repeated in the database
       unique: true,
     },
     jobTitle: {
-      type: "String",
+      type: String,
     },
 
     gender: {
-      type: "String",
+      type: String,
     },
   },
   { timestamps: true }
@@ -74,15 +74,16 @@ app.get("/users", async (req, res) => {
   //the empty braces here means all the users
   const allDbUsers = await User.find({});
   const html = `<ul>
-    ${allDbUsers
-      .map((user) => `<li>${user.firstName} - ${user.email} </li>`)
-      .join("")}</ul>`;
+      ${allDbUsers
+        .map((user) => `<li>${user.firstName} - ${user.email} </li>`)
+        .join("")}</ul>`;
   res.send(html);
 });
 
 app
   .route("/api/users/:id")
-  .get((req, res) => {
+  .get(async (req, res) => {
+    const user = await User.findById(req.params.id);
     // const id = Number(req.params.id);
 
     //finding the id in the json file
@@ -90,13 +91,15 @@ app
     if (!user) return res.status(404).json({ error: "User not found" });
     return res.json(user);
   })
-  .patch((req, res) => {
+  .patch(async (req, res) => {
     //Edit user with Id
-    res.json({ status: "Pending" });
+    await User.findByIdAndUpdate(req.params.id, { lastName: "Changed" });
+    return res.json({ status: "Success" });
   })
-  .delete((req, res) => {
+  .delete(async (req, res) => {
     //Todo: Delete the user with
-    return res.json({ status: "pending" });
+    await User.findByIdAndDelete(req.params.id);
+    return res.json({ status: "Success" });
   });
 
 app.post("/api/users", async (req, res) => {

@@ -33,3 +33,12 @@
 1725654829006 : ::1: GET : /users
 1725654830215 : ::1: GET : /favicon.ico
 1725655076408 : ::1: GET : /api/users
+1725655708142 : ::1: GET : /api/users/66db64a36ec56b29e83bde92
+1725655729575 : ::1: GET : /api/users
+1725655740500 : ::1: GET : /api/users/66db653de798488ff085a60e
+1725655874973 : ::1: GET : /api/users/:id
+1725656018072 : ::1: PATCH : /api/users/:id
+1725656065714 : ::1: POST : /api/users
+1725656163196 : ::1: PATCH : /api/users/66db653de798488ff085a60e
+1725656167415 : ::1: POST : /api/users
+1725656302422 : ::1: DELETE : /api/users/66db653de798488ff085a60e'
