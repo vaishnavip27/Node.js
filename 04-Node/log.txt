@@ -10,3 +10,16 @@
 1725568694283 : ::1: GET : /api/users
 1725569155201 : ::1: POST : /api/users/1004
 1725569167122 : ::1: POST : /api/users
+1725569347140 : ::1: POST : /api/users
+1725598324623 : ::1: GET : /users
+1725598366627 : ::1: POST : /api/users
+1725598378441 : ::1: POST : /api/users
+1725637692630 : ::1: GET : /
+1725637692810 : ::1: GET : /
+1725637734985 : ::1: POST : /api/users
+1725637749632 : ::1: POST : /api/users
+1725637753475 : ::1: POST : /api/users
+1725637776463 : ::1: POST : /api/users
+1725637922522 : ::1: GET : /userss
+1725638296813 : ::1: GET : /userss
+1725638309314 : ::1: GET : /api/users/2000

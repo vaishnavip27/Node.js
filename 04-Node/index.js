@@ -41,6 +41,7 @@ app
 
     //finding the id in the json file
     const user = users.find((user) => user.id === id);
+    if (!user) return res.status(404).json({ error: "User not found" });
     return res.json(user);
   })
   .patch((req, res) => {
@@ -55,9 +56,19 @@ app
 app.post("/api/users", (req, res) => {
   //Todo: Create new user
   const body = req.body;
+  if (
+    !body ||
+    !body.first_name ||
+    !body.email ||
+    !body.gender ||
+    !body.job_title ||
+    !body.job_name
+  ) {
+    return res.status(400).json({ msg: "All field are required" });
+  }
   users.push({ ...body, id: users.length + 1 });
   fs.writeFile("./MOCK_DATA.json", JSON.stringify(users), (err, data) => {
-    return res.json({ status: "success", id: users.length });
+    return res.status(201).json({ status: "success", id: users.length });
   });
 });
 
