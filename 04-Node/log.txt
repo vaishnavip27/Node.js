@@ -23,3 +23,13 @@
 1725637922522 : ::1: GET : /userss
 1725638296813 : ::1: GET : /userss
 1725638309314 : ::1: GET : /api/users/2000
+1725653860922 : ::1: POST : /api/users
+1725653891102 : ::1: POST : /api/users
+1725654179749 : ::1: POST : /api/users
+1725654333032 : ::1: POST : /api/users
+1725654706017 : ::1: GET : /
+1725654708122 : ::1: GET : /users
+1725654743365 : ::1: GET : /users
+1725654829006 : ::1: GET : /users
+1725654830215 : ::1: GET : /favicon.ico
+1725655076408 : ::1: GET : /api/users
