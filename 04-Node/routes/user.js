@@ -9,16 +9,7 @@ const {
 
 const router = express.Router();
 
-//rest api points
-//returning me all the users
-// router.get("/", async (req, res) => {
-//   const allDbUsers = await User.find({});
-//   return res.json(allDbUsers);
-// res.setHeader("X-MyName", "Vaishnavi Patil"); //custom header
-//Always add X to custom headers
-// });
-
-router.get("/", handleGetAllUsers);
+router.route("/").get(handleGetAllUsers).post(handleCreateNewUserById);
 
 router
   .route("/:id")
@@ -26,7 +17,5 @@ router
   .get(handleGetUserById)
   .patch(handleUpdateUserById)
   .delete(handleDeleteUserById);
-
-router.post("/", handleCreateNewUserById);
 
 module.exports = router;

@@ -1,3 +1,24 @@
 1. Schema - define the structure
 2. Using schema we build a model
 3. Using the model, we make CRUD operations
+
+
+execution
+1. from index.js file, we require express and the connection, a middleware and a router
+    Make an app instance, a port instance 
+    connect mongodb
+    apply middlewares
+    register a route
+    listen to the port
+
+2. connection.js
+
+3. router
+    make a express router
+    register routes
+
+4. controllers
+
+5. models
+   make a schema
+   and then make a model from the schema

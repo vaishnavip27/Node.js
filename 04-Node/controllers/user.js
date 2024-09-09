@@ -26,7 +26,7 @@ async function handleDeleteUserById(req, res) {
   return res.json({ status: "Success" });
 }
 
-async function handleCreateNewUserUser(req, res) {
+async function handleCreateNewUserById(req, res) {
   //Todo: Create new user
   const body = req.body;
   if (
@@ -51,10 +51,10 @@ async function handleCreateNewUserUser(req, res) {
   return res.status(201).json({ msg: "Success", id: result._id });
 }
 
-model.exports = {
+module.exports = {
   handleGetAllUsers,
   handleGetUserById,
   handleUpdateUserById,
   handleDeleteUserById,
-  handleCreateNewUserUser,
+  handleCreateNewUserById,
 };
