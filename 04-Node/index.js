@@ -1,8 +1,7 @@
 const express = require("express");
-const fs = require("fs");
+const { connectMongoDb } = require("./connection");
 
 const { logReqRes } = require("./middlewares");
-const { connectMongoDb } = require("./connection");
 const userRouter = require("./routes/user");
 
 const app = express();

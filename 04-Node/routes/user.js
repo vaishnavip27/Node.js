@@ -10,18 +10,9 @@ router.get("/", async (req, res) => {
   //Always add X to custom headers
 });
 
-// router.get("/users", async (req, res) => {
-//   //the empty braces here means all the users
-//   const allDbUsers = await User.find({});
-//   const html = `<ul>
-//         ${allDbUsers
-//           .map((user) => `<li>${user.firstName} - ${user.email} </li>`)
-//           .join("")}</ul>`;
-//   res.send(html);
-// });
-
 router
   .route("/:id")
+  //the below are the controllers
   .get(async (req, res) => {
     const user = await User.findById(req.params.id);
     // const id = Number(req.params.id);
