@@ -3,7 +3,7 @@
 3. Using the model, we make CRUD operations
 
 
-execution
+Execution
 1. from index.js file, we require express and the connection, a middleware and a router
     Make an app instance, a port instance 
     connect mongodb
@@ -11,14 +11,14 @@ execution
     register a route
     listen to the port
 
-2. connection.js
+2. Connection.js
 
-3. router
+3. Router
     make a express router
     register routes
 
-4. controllers
+4. Controllers
 
-5. models
+5. Models
    make a schema
    and then make a model from the schema
